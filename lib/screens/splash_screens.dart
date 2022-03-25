@@ -1,5 +1,6 @@
 // ignore_for_file: annotate_overrides
 import 'dart:async';
+import 'package:animate_do/animate_do.dart';
 import 'package:chatapp/shared/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -27,25 +28,29 @@ class _SplashScreensState extends State<SplashScreens> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 140,
-              height: 140,
-              margin: EdgeInsets.only(
-                right: 30,
-              ),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/logo.png',
+            FadeInLeft(
+              child: Container(
+                width: 140,
+                height: 140,
+                margin: EdgeInsets.only(
+                  right: 30,
+                ),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/logo.png',
+                    ),
                   ),
                 ),
               ),
             ),
-            Text(
-              'Ayo Chat',
-              style: blueTextStyle.copyWith(
-                fontSize: 36,
-                fontWeight: semiBold,
+            FadeInRight(
+              child: Text(
+                'Ayo Chat',
+                style: blueTextStyle.copyWith(
+                  fontSize: 36,
+                  fontWeight: semiBold,
+                ),
               ),
             ),
           ],
